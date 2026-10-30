@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-rubik {
+  font-family: "Rubik", sans-serif;
+}
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+/* Custom Navbar underline & transition effects */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #d97706;
+  transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
