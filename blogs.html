@@ -114,22 +114,10 @@
       <div class="max-w-7xl mx-auto px-5 text-center">
         <!-- Page Title -->
         <h1
-          class="font-oswald text-3xl sm:text-5xl font-bold uppercase tracking-wider text-white mb-3"
+          class="font-oswald text-3xl sm:text-6xl font-bold uppercase tracking-wide text-white mb-3"
         >
           Blogs
         </h1>
-
-        <!-- Breadcrumb Navigation Links -->
-        <nav
-          aria-label="Breadcrumb"
-          class="inline-flex items-center gap-2 font-rubik text-xs sm:text-sm uppercase tracking-widest text-white/90"
-        >
-          <a href="index.html" class="hover:text-[#0F172A] transition-colors"
-            >Home</a
-          >
-          <span class="text-white/60">/</span>
-          <span class="text-[#0F172A] font-semibold">Blogs</span>
-        </nav>
       </div>
     </section>
 
@@ -138,47 +126,42 @@
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Project Card 1 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -192,50 +175,49 @@
                 </svg>
               </a>
             </div>
-          </div>
 
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
           <!-- Project Card 2 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -249,50 +231,49 @@
                 </svg>
               </a>
             </div>
-          </div>
 
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
           <!-- Project Card 3 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -306,50 +287,49 @@
                 </svg>
               </a>
             </div>
-          </div>
 
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
           <!-- Project Card 4 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -363,49 +343,49 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
           <!-- Project Card 5 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -419,49 +399,49 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
           <!-- Project Card 6 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -475,7 +455,12 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
         </div>
       </div>
     </section>

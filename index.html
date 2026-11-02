@@ -142,20 +142,14 @@
               <stop offset="1" stop-color="#94A3B8" stop-opacity="0" />
             </linearGradient>
           </defs>
-
-          <!-- Back wave (lighter, larger) -->
           <path
             d="M0 0H800C740 70 650 140 540 150C420 162 350 80 240 100C130 120 70 220 0 270Z"
             fill="url(#waveGray1)"
           />
-
-          <!-- Front wave (slightly darker, smaller) -->
           <path
             d="M0 0H560C510 55 440 100 355 106C260 112 205 55 120 75C65 88 28 135 0 175Z"
             fill="url(#waveGray2)"
           />
-
-          <!-- Thin accent line following the wave -->
           <path
             d="M0 300C70 245 130 140 240 120C350 100 420 182 540 170C650 160 740 90 800 20"
             stroke="#CBD5E1"
@@ -165,20 +159,69 @@
         </svg>
       </div>
 
+      <!-- Soft glow behind the portrait -->
+      <div
+        class="pointer-events-none absolute top-1/3 -right-24 w-96 h-96 rounded-full bg-[#D97706]/10 blur-3xl"
+      ></div>
+
       <div
         class="max-w-7xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-center relative z-10"
       >
         <!-- Left Column: Typography & Content -->
         <div class="md:col-span-7">
+          <!-- Name + designation -->
+          <div class="hero-in" style="--d: 0.1s">
+            <div class="flex items-center gap-4">
+              <span class="w-12 h-1 bg-[#D97706] shrink-0"></span>
+              <p
+                class="font-oswald text-[22px] md:text-[28px] font-semibold text-[#0F172A] leading-tight"
+              >
+                Hello, I'm <span class="text-[#D97706]">Surendra Bajagain</span>
+              </p>
+            </div>
+            <p
+              class="mt-2 pl-16 font-rubik text-[17px] md:text-xl text-slate-600 min-h-[30px]"
+            >
+              <span id="hero-typed" class="font-medium text-[#0F172A]"
+                >Media Facilitator</span
+              ><span class="hero-caret text-[#D97706] font-light ml-0.5"
+                >|</span
+              >
+            </p>
+          </div>
+
+          <!-- Headline -->
           <h1
-            class="font-oswald text-4xl md:text-[80px] font-semibold uppercase text-[#0F172A] leading-[90px]"
+            class="hero-in mt-8 font-oswald text-[44px] sm:text-6xl md:text-[68px] lg:text-[80px] font-semibold uppercase text-[#0F172A] leading-[1.05]"
+            style="--d: 0.3s"
           >
             <span class="text-[#D97706]">Telling the story</span><br />
             of governance<br />
-            truthfully.
+            <span class="relative inline-block">
+              truthfully.
+              <!-- Underline draws itself -->
+              <svg
+                class="absolute left-0 -bottom-3 w-full h-4 text-[#D97706]"
+                viewBox="0 0 200 12"
+                preserveAspectRatio="none"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  class="hero-draw"
+                  pathLength="1"
+                  vector-effect="non-scaling-stroke"
+                  d="M2 8 C 40 2, 80 11, 110 6 S 170 3, 198 7"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
           </h1>
 
-          <div class="mt-10 flex items-start gap-4">
+          <!-- Paragraph -->
+          <div class="hero-in mt-12 flex items-start gap-4" style="--d: 0.5s">
             <div class="w-1 h-14 bg-[#D97706] shrink-0"></div>
             <p
               class="font-rubik text-base sm:text-lg text-slate-700 max-w-xl leading-relaxed"
@@ -188,15 +231,18 @@
             </p>
           </div>
 
-          <div class="mt-10 flex flex-wrap gap-4">
+          <!-- Button -->
+          <div class="hero-in mt-10 flex flex-wrap gap-4" style="--d: 0.7s">
             <a
               href="contact.html"
-              class="inline-flex items-center gap-3 bg-[#023464] hover:bg-slate-800 text-white font-oswald text-lg tracking-wider uppercase px-8 py-3.5 shadow-lg transition-all duration-300 transform hover:translate-x-0.5"
+              class="group/btn inline-flex items-stretch bg-[#0F172A] text-white font-oswald text-lg tracking-wider uppercase shadow-[0_20px_40px_-15px_rgba(15,23,42,0.6)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_45px_-15px_rgba(217,119,6,0.6)]"
             >
-              <span>Contact Me</span>
-              <span class="bg-white/20 p-1">
+              <span class="px-8 py-3.5">Contact Me</span>
+              <span
+                class="flex items-center justify-center w-14 bg-[#D97706] transition-all duration-300 group-hover/btn:w-16"
+              >
                 <svg
-                  class="w-4 h-4 text-white"
+                  class="w-5 h-5 text-white transition-transform duration-300 group-hover/btn:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -212,13 +258,46 @@
             </a>
           </div>
         </div>
-        <!-- right -->
+
+        <!-- Right Column: Portrait -->
         <div
           class="md:col-span-5 relative min-h-[460px] md:min-h-[680px] lg:min-h-[800px]"
         >
+          <!-- Navy block behind the portrait -->
+          <div
+            class="hero-block absolute bottom-0 right-0 md:right-4 w-[80%] md:w-[85%] h-[62%] bg-[#0F172A] z-0 overflow-hidden"
+          >
+            <span class="absolute top-0 left-0 h-1 w-24 bg-[#D97706]"></span>
+            <!-- Dot pattern inside block -->
+            <svg
+              class="absolute top-6 right-6 opacity-70"
+              width="120"
+              height="120"
+              fill="none"
+              aria-hidden="true"
+            >
+              <pattern
+                id="hero-dots"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="4" cy="4" r="2.2" fill="#D97706" />
+              </pattern>
+              <rect width="120" height="120" fill="url(#hero-dots)" />
+            </svg>
+          </div>
+
+          <!-- Amber square accent -->
+          <div
+            class="absolute top-[30%] right-0 w-14 h-14 bg-[#D97706] z-0 hidden sm:block"
+          ></div>
+
           <!-- Image wrapper: pinned to bottom-right, wider than the column -->
           <div
-            class="absolute bottom-0 right-0 md:-right-10 lg:-right-24 w-[90%] sm:w-[75%] md:w-[135%] lg:w-[155%] max-w-none h-full flex items-end justify-center md:justify-end"
+            class="absolute bottom-0 right-0 md:-right-10 lg:-right-24 w-[90%] sm:w-[75%] md:w-[135%] lg:w-[155%] max-w-none h-full flex items-end justify-center md:justify-end z-10"
           >
             <img
               src="/assets/image-1.png"
@@ -250,27 +329,113 @@
               SB
             </div>
           </div>
+
+          <!-- Floating badge 1 -->
+          <div class="hero-float absolute top-[14%] left-2 md:-left-6 z-20">
+            <div
+              class="relative bg-white px-5 py-3.5 shadow-[0_20px_40px_-15px_rgba(15,23,42,0.45)]"
+            >
+              <span class="absolute top-0 left-0 h-1 w-10 bg-[#D97706]"></span>
+              <p
+                class="font-oswald text-[18px] font-semibold text-[#0F172A] leading-tight"
+              >
+                Media Facilitator
+              </p>
+              <p class="font-rubik text-[13px] text-slate-500 mt-0.5">
+                OPMCM Nepal
+              </p>
+            </div>
+          </div>
+
+          <!-- Floating badge 2 -->
+          <div
+            class="hero-float-slow absolute bottom-[12%] left-2 md:-left-10 z-20"
+          >
+            <div
+              class="relative bg-[#D97706] px-5 py-3.5 shadow-[0_20px_40px_-15px_rgba(217,119,6,0.6)]"
+            >
+              <p
+                class="font-oswald text-[18px] font-semibold text-white leading-tight"
+              >
+                Associate Expert
+              </p>
+              <p class="font-rubik text-[13px] text-white/85 mt-0.5">
+                Kathmandu Metro
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Typing effect for the designation line -->
+      <script>
+        (function () {
+          var el = document.getElementById("hero-typed");
+          if (!el) return;
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            return;
+
+          var roles = [
+            "Media Facilitator",
+            "Public Communicator",
+            "News Writer",
+          ];
+          var r = 0,
+            i = 0,
+            deleting = false;
+          el.textContent = "";
+
+          function tick() {
+            var word = roles[r];
+            if (!deleting) {
+              i++;
+              el.textContent = word.slice(0, i);
+              if (i === word.length) {
+                deleting = true;
+                return setTimeout(tick, 1800);
+              }
+              return setTimeout(tick, 80);
+            }
+            i--;
+            el.textContent = word.slice(0, i);
+            if (i === 0) {
+              deleting = false;
+              r = (r + 1) % roles.length;
+              return setTimeout(tick, 400);
+            }
+            setTimeout(tick, 40);
+          }
+          setTimeout(tick, 900);
+        })();
+      </script>
     </section>
 
     <!-- About Section -->
     <section class="py-16 md:py-24 relative overflow-hidden bg-white">
+      <!-- Soft background shapes -->
       <div
-        class="max-w-7xl mx-auto px-5 grid md:grid-cols-12 gap-4 items-center relative z-10"
+        class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#D97706]/10 blur-3xl"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-32 -left-24 w-80 h-80 rounded-full bg-[#0F172A]/5 blur-3xl"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-5 grid md:grid-cols-12 gap-10 md:gap-8 items-center relative z-10"
       >
-        <!-- Left Column: Image Box with Dotted Pattern -->
+        <!-- Left Column: Image -->
         <div class="md:col-span-6 relative">
-          <div class="relative w-full max-w-lg mx-auto md:mx-0">
+          <div class="relative w-full max-w-lg mx-auto md:mx-0 group">
             <!-- Dotted Pattern Background -->
             <div
-              class="absolute -bottom-16 -left-14 z-0 pointer-events-none opacity-80"
+              class="absolute -bottom-12 -left-12 z-0 pointer-events-none opacity-80"
             >
               <svg
                 width="240"
                 height="240"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <pattern
                   id="dot-grid"
@@ -280,36 +445,69 @@
                   height="20"
                   patternUnits="userSpaceOnUse"
                 >
-                  <circle cx="4" cy="4" r="2.5" fill="#D97708" />
+                  <circle cx="4" cy="4" r="2.5" fill="#D97706" />
                 </pattern>
                 <rect width="240" height="240" fill="url(#dot-grid)" />
               </svg>
             </div>
 
+            <!-- Offset navy block behind image -->
+            <div
+              class="absolute top-6 left-6 w-full h-full bg-[#0F172A] z-0 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"
+            ></div>
+
+            <!-- Amber corner accent -->
+            <div
+              class="absolute -top-4 -right-4 w-24 h-24 bg-[#D97706] z-0"
+            ></div>
+
             <!-- Image Container -->
             <div
-              class="relative z-10 overflow-hidden h-[420px] sm:h-[480px] bg-slate-100 border border-slate-200"
+              class="relative z-10 overflow-hidden h-[420px] sm:h-[480px] bg-slate-100 shadow-[0_30px_60px_-20px_rgba(15,23,42,0.5)]"
             >
               <img
                 src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM (1).jpeg"
                 alt="Surendra Bajagain"
-                class="absolute inset-0 w-full h-full object-cover"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
+              <!-- Soft bottom fade for the name tag -->
+              <div
+                class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0F172A]/60 to-transparent"
+              ></div>
             </div>
           </div>
         </div>
 
         <!-- Right Column: Content -->
-        <div class="md:col-span-6">
+        <div class="md:col-span-6 relative">
           <h2
-            class="font-oswald text-3xl sm:text-[44px] font-bold uppercase text-[#0F172A] leading-[1.1]"
+            class="relative font-oswald text-3xl sm:text-[46px] font-semibold text-[#0F172A] leading-[1.15] tracking-[-0.5px]"
           >
             Bridging the gap between
-            <span class="text-[#D97706]">media, policy,</span> and public
+            <span class="relative inline-block text-[#D97706]">
+              media, policy,
+              <!-- Hand-drawn underline -->
+              <svg
+                class="absolute left-0 -bottom-2 w-full h-3 text-[#D97706]"
+                viewBox="0 0 200 12"
+                preserveAspectRatio="none"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 8 C 40 2, 80 11, 110 6 S 170 3, 198 7"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            and public
           </h2>
 
+          <!-- Text with amber side line -->
           <div
-            class="mt-6 space-y-4 font-rubik text-base sm:text-lg text-slate-700 leading-relaxed"
+            class="mt-8 pl-5 border-l-4 border-[#D97706] font-rubik text-base sm:text-lg text-slate-600 leading-relaxed"
           >
             <p>
               Transitioning from journalism to public communication, I work at
@@ -319,16 +517,18 @@
           </div>
 
           <!-- Action Button -->
-          <div class="mt-8 flex flex-wrap gap-4">
+          <div class="mt-10 flex flex-wrap gap-4">
             <a
               href="/contact.html"
               target="_blank"
-              class="inline-flex items-center gap-3 bg-[#023464] hover:bg-slate-800 text-white font-oswald text-lg tracking-wider uppercase px-8 py-3.5 shadow-lg transition-all duration-300 transform hover:translate-x-0.5"
+              class="group/btn inline-flex items-stretch bg-[#0F172A] text-white font-oswald text-lg tracking-wider uppercase shadow-[0_20px_40px_-15px_rgba(15,23,42,0.6)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_45px_-15px_rgba(217,119,6,0.6)]"
             >
-              <span>Contact Me</span>
-              <span class="bg-white/20 p-1">
+              <span class="px-8 py-3.5">Contact Me</span>
+              <span
+                class="flex items-center justify-center w-14 bg-[#D97706] transition-all duration-300 group-hover/btn:w-16"
+              >
                 <svg
-                  class="w-4 h-4 text-white"
+                  class="w-5 h-5 text-white transition-transform duration-300 group-hover/btn:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -347,323 +547,77 @@
       </div>
     </section>
 
-    <!-- Experience & Skill Section -->
-    <section class="py-16 md:py-24 relative overflow-hidden bg-white">
-      <div class="max-w-7xl mx-auto px-5">
-        <!-- Section Header Header -->
-        <div class="grid md:grid-cols-12 gap-8 items-end mb-16">
-          <div class="md:col-span-6">
-            <span
-              class="font-rubik text-[16px] uppercase text-[#D97706] font-medium block mb-2"
-            >
-              My Experience AND Skills
-            </span>
-            <h2
-              class="font-oswald text-3xl sm:text-[44px] font-semibold uppercase tracking-[-2px] text-[#0F172A] leading-[1.1]"
-            >
-              Experience <span class="text-[#D97706]">&</span> Skill
-            </h2>
-          </div>
-          <div class="md:col-span-6 flex items-start gap-4">
-            <div class="w-1.5 h-12 bg-[#D97706] shrink-0 mt-1"></div>
-            <p
-              class="font-rubik text-[18px] font-normal text-slate-700 leading-relaxed"
-            >
-              Highlighting key professional milestones in public communication,
-              media reporting, and program coordination.
-            </p>
-          </div>
-        </div>
-
-        <!-- Top Row: 4 Experience Cards  -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          <!-- Card 1 -->
-          <div
-            class="bg-[#0F172A] text-white p-8 flex flex-col justify-between"
-          >
-            <div>
-              <span
-                class="font-rubik text-[14px] uppercase text-slate-200 block mb-2"
-              >
-                2026 - Present (Media Facilitator)
-              </span>
-              <h3
-                class="font-oswald text-[20px] font-semibold uppercase text-[#D97706] mb-4"
-              >
-                OPMCM Nepal.
-              </h3>
-              <p class="font-rubik text-[15px] text-white leading-[24px]">
-                Media Facilitator at the Office of the Prime Minister and
-                Council of Ministers.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="bg-[#0F172A] text-white p-8 flex flex-col justify-between"
-          >
-            <div>
-              <span
-                class="font-rubik text-[14px] uppercase text-slate-200 block mb-2"
-              >
-                2023 - Present (Associate Expert)
-              </span>
-              <h3
-                class="font-oswald text-[20px] font-semibold uppercase text-[#D97706] mb-4"
-              >
-                Kathmandu Metro.
-              </h3>
-              <p class="font-rubik text-[15px] text-white leading-[24px]">
-                Serving at Kathmandu Metropolitan City Office managing expert
-                public communications.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="bg-[#0F172A] text-white p-8 flex flex-col justify-between"
-          >
-            <div>
-              <span
-                class="font-rubik text-[14px] uppercase text-slate-200 block mb-2"
-              >
-                2021 - 2023 (Reporter)
-              </span>
-              <h3
-                class="font-oswald text-[20px] font-semibold uppercase text-[#D97706] mb-4"
-              >
-                Nepalwatch & Live.
-              </h3>
-              <p class="font-rubik text-[15px] text-white leading-[24px]">
-                Hard news reporting, news writing, and media production across
-                digital desks.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="bg-[#0F172A] text-white p-8 flex flex-col justify-between"
-          >
-            <div>
-              <span
-                class="font-rubik text-[14px] uppercase text-slate-200 block mb-2"
-              >
-                2016 - 2017 (Coordinator)
-              </span>
-              <h3
-                class="font-oswald text-[20px] font-semibold uppercase text-[#D97706] mb-4"
-              >
-                Ramilo Shikshya.
-              </h3>
-              <p class="font-rubik text-[15px] text-white leading-[24px]">
-                Led community digital literacy programs and educational outreach
-                modules.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom Row: 4 Skill Circular Progress Indicators -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <!-- Skill 1 -->
-          <div class="flex flex-col items-center">
-            <div
-              class="relative w-36 h-36 flex items-center justify-center mb-3"
-            >
-              <svg
-                class="w-full h-full transform -rotate-90"
-                viewBox="0 0 36 36"
-              >
-                <path
-                  class="text-slate-200"
-                  stroke-width="3"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-                <path
-                  class="text-[#D97706]"
-                  stroke-dasharray="90, 100"
-                  stroke-width="3"
-                  stroke-linecap="butt"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-              </svg>
-              <span
-                class="absolute font-oswald text-[48px] font-bold text-[#0F172A]"
-                >90 <span class="text-[20px]">%</span></span
-              >
-            </div>
-            <h4
-              class="font-oswald text-[20px] font-semibold uppercase text-[#0F172A]"
-            >
-              Public Communication
-            </h4>
-          </div>
-
-          <!-- Skill 2 -->
-          <div class="flex flex-col items-center">
-            <div
-              class="relative w-36 h-36 flex items-center justify-center mb-3"
-            >
-              <svg
-                class="w-full h-full transform -rotate-90"
-                viewBox="0 0 36 36"
-              >
-                <path
-                  class="text-slate-200"
-                  stroke-width="3"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-                <path
-                  class="text-[#D97706]"
-                  stroke-dasharray="85, 100"
-                  stroke-width="3"
-                  stroke-linecap="butt"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-              </svg>
-              <span
-                class="absolute font-oswald text-[48px] font-bold text-[#0F172A]"
-                >85 <span class="text-[20px]">%</span></span
-              >
-            </div>
-            <h4
-              class="font-oswald text-[20px] font-semibold uppercase text-[#0F172A]"
-            >
-              News Writing & Reporting
-            </h4>
-          </div>
-
-          <!-- Skill 3 -->
-          <div class="flex flex-col items-center">
-            <div
-              class="relative w-36 h-36 flex items-center justify-center mb-3"
-            >
-              <svg
-                class="w-full h-full transform -rotate-90"
-                viewBox="0 0 36 36"
-              >
-                <path
-                  class="text-slate-200"
-                  stroke-width="3"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-                <path
-                  class="text-[#D97706]"
-                  stroke-dasharray="80, 100"
-                  stroke-width="3"
-                  stroke-linecap="butt"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-              </svg>
-              <span
-                class="absolute font-oswald text-[48px] font-bold text-[#0F172A]"
-                >80 <span class="text-[20px]">%</span></span
-              >
-            </div>
-            <h4
-              class="font-oswald text-[20px] font-semibold uppercase text-[#0F172A]"
-            >
-              Team Coordination
-            </h4>
-          </div>
-
-          <!-- Skill 4 -->
-          <div class="flex flex-col items-center">
-            <div
-              class="relative w-36 h-36 flex items-center justify-center mb-3"
-            >
-              <svg
-                class="w-full h-full transform -rotate-90"
-                viewBox="0 0 36 36"
-              >
-                <path
-                  class="text-slate-200"
-                  stroke-width="3"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-                <path
-                  class="text-[#D97706]"
-                  stroke-dasharray="85, 100"
-                  stroke-width="3"
-                  stroke-linecap="butt"
-                  stroke="currentColor"
-                  fill="none"
-                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                ></path>
-              </svg>
-              <span
-                class="absolute font-oswald text-[48px] font-bold text-[#0F172A]"
-                >85 <span class="text-[20px]">%</span></span
-              >
-            </div>
-            <h4
-              class="font-oswald text-[20px] font-semibold uppercase text-[#0F172A]"
-            >
-              Interpersonal Communication
-            </h4>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- What I Do / Services and Solutions Section -->
     <section class="py-16 md:py-24 relative overflow-hidden bg-white">
-      <div class="max-w-7xl mx-auto px-5">
-        <!-- Header Row -->
-        <div class="grid md:grid-cols-12 gap-8 items-end mb-16">
-          <div class="md:col-span-6">
-            <span
-              class="font-rubik text-[16px] uppercase text-[#D97706] font-medium block mb-2"
-            >
-              What I Do
-            </span>
-            <h2
-              class="font-oswald text-3xl sm:text-[44px] font-semibold uppercase tracking-[-2px] text-[#0F172A] leading-[1.1]"
-            >
-              Services <span class="text-[#D97706]">AND</span> Solutions
-            </h2>
-          </div>
-          <div class="md:col-span-6 flex items-start gap-4">
-            <div class="w-1.5 h-12 bg-[#D97706] shrink-0 mt-1"></div>
-            <p
-              class="font-rubik text-[18px] font-normal text-slate-700 leading-relaxed"
-            >
-              Connecting public institutions, media platforms, and citizen
-              communities through structured communication.
-            </p>
-          </div>
+      <!-- Soft background shapes -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#D97706]/10 blur-3xl"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-32 -left-24 w-80 h-80 rounded-full bg-[#0F172A]/5 blur-3xl"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-5 relative">
+        <!-- Header: left aligned, personal -->
+        <div class="mb-14 md:mb-20 max-w-2xl">
+          <span
+            class="font-rubik text-[18px] text-[#D97706] font-medium block mb-3"
+          >
+            What I Do
+          </span>
+          <h2
+            class="font-oswald text-4xl sm:text-[52px] font-semibold tracking-[-1px] text-[#0F172A] leading-[1.1]"
+          >
+            Services <span class="text-[#D97706]">and</span> Solutions
+          </h2>
+          <!-- Hand-drawn style underline -->
+          <svg
+            class="mt-3 w-44 h-3 text-[#D97706]"
+            viewBox="0 0 176 12"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M2 8 C 30 2, 60 11, 90 6 S 150 3, 174 7"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
         </div>
 
-        <!-- 3 Cards Grid -->
-        <div class="grid md:grid-cols-3 gap-8 items-stretch">
-          <!-- Card 1  -->
-          <div
-            class="bg-gray-50 text-white p-10 flex flex-col items-center text-center justify-between transition-transform duration-300 hover:-translate-y-1"
+        <!-- Staggered cards -->
+        <div class="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
+          <!-- Card 1 -->
+          <article
+            class="group relative overflow-hidden bg-slate-50 p-8 md:p-10 text-left shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:bg-[#0F172A] hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.45)]"
           >
-            <div class="flex flex-col items-center">
-              <!-- Icon Container -->
+            <!-- Faint corner icon -->
+            <svg
+              class="pointer-events-none absolute -bottom-6 -right-6 w-44 h-44 text-[#0F172A]/[0.05] transition-colors duration-500 group-hover:text-white/[0.07]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.6"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+              ></path>
+            </svg>
+
+            <!-- Icon with offset block -->
+            <div class="relative mb-10 w-16 h-16">
               <div
-                class="mb-8 flex items-center justify-center border border-white/10 bg-white/5"
+                class="absolute inset-0 translate-x-2 translate-y-2 bg-[#D97706]/30 transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3"
+              ></div>
+              <div
+                class="relative w-full h-full bg-white flex items-center justify-center transition-colors duration-500 group-hover:bg-[#D97706]"
               >
                 <svg
-                  class="w-10 h-10 text-[#D97706]"
+                  class="w-8 h-8 text-[#D97706] transition-colors duration-500 group-hover:text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -671,37 +625,62 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="1"
+                    stroke-width="1.5"
                     d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
                   ></path>
                 </svg>
               </div>
-
-              <h3
-                class="font-oswald text-[24px] font-semibold uppercase text-[#0F172A] mb-4"
-              >
-                Public Communication
-              </h3>
-
-              <p
-                class="font-rubik text-[18px] font-normal text-slate-500 leading-[27px]"
-              >
-                Translating complex government policy, municipal operations, and
-                public information into plain, and transparent narratives for
-                citizens.
-              </p>
             </div>
-          </div>
 
-          <!-- Card 2 (Highlighted Amber Card - Center) -->
-          <div
-            class="bg-[#D97706] text-white p-10 flex flex-col items-center text-center justify-between transition-transform duration-300 hover:-translate-y-1"
+            <h3
+              class="relative font-oswald text-[26px] font-semibold text-[#0F172A] mb-3 transition-colors duration-500 group-hover:text-white"
+            >
+              Public Communication
+            </h3>
+            <p
+              class="relative font-rubik text-[17px] font-normal text-slate-600 leading-[27px] transition-colors duration-500 group-hover:text-slate-300"
+            >
+              Translating complex government policy, municipal operations, and
+              public information into plain, and transparent narratives for
+              citizens.
+            </p>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
+
+          <!-- Card 2 (Highlighted, dropped lower) -->
+          <article
+            class="group relative overflow-hidden bg-[#D97706] p-8 md:p-10 text-left md:mt-12 shadow-[0_25px_50px_-15px_rgba(217,119,6,0.6)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_60px_-15px_rgba(217,119,6,0.7)]"
           >
-            <div class="flex flex-col items-center">
-              <!-- Icon Container -->
-              <div class="mb-8 flex items-center justify-center">
+            <!-- Faint corner icon -->
+            <svg
+              class="pointer-events-none absolute -bottom-6 -right-6 w-44 h-44 text-white/[0.12]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.6"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+
+            <!-- Icon with offset block -->
+            <div class="relative mb-10 w-16 h-16">
+              <div
+                class="absolute inset-0 translate-x-2 translate-y-2 bg-[#0F172A]/40 transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3"
+              ></div>
+              <div
+                class="relative w-full h-full bg-white flex items-center justify-center"
+              >
                 <svg
-                  class="w-10 h-10 text-white"
+                  class="w-8 h-8 text-[#D97706]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -709,36 +688,61 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="1"
+                    stroke-width="1.5"
                     d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                   ></path>
                 </svg>
               </div>
-
-              <h3
-                class="font-oswald text-[24px] font-bold uppercase tracking-wider text-white mb-4"
-              >
-                Media Relations
-              </h3>
-
-              <p
-                class="font-rubik text-[18px] font-normal text-slate-100 leading-[27px]"
-              >
-                Facilitating press operations, news writing, and strategic
-                communication streams media houses, and digital newsrooms.
-              </p>
             </div>
-          </div>
 
-          <!-- Card 3 (Standard Navy Card) -->
-          <div
-            class="bg-gray-100 text-gray-800 p-10 flex flex-col items-center text-center justify-between transition-transform duration-300 hover:-translate-y-1"
+            <h3
+              class="relative font-oswald text-[26px] font-semibold text-white mb-3"
+            >
+              Media Relations
+            </h3>
+            <p
+              class="relative font-rubik text-[17px] font-normal text-white/90 leading-[27px]"
+            >
+              Facilitating press operations, news writing, and strategic
+              communication streams media houses, and digital newsrooms.
+            </p>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-white transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="group relative overflow-hidden bg-slate-50 p-8 md:p-10 text-left md:mt-6 shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:bg-[#0F172A] hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.45)]"
           >
-            <div class="flex flex-col items-center">
-              <!-- Icon Container -->
-              <div class="mb-8 flex items-center justify-center">
+            <!-- Faint corner icon -->
+            <svg
+              class="pointer-events-none absolute -bottom-6 -right-6 w-44 h-44 text-[#0F172A]/[0.05] transition-colors duration-500 group-hover:text-white/[0.07]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.6"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
+            </svg>
+
+            <!-- Icon with offset block -->
+            <div class="relative mb-10 w-16 h-16">
+              <div
+                class="absolute inset-0 translate-x-2 translate-y-2 bg-[#D97706]/30 transition-transform duration-500 group-hover:translate-x-3 group-hover:translate-y-3"
+              ></div>
+              <div
+                class="relative w-full h-full bg-white flex items-center justify-center transition-colors duration-500 group-hover:bg-[#D97706]"
+              >
                 <svg
-                  class="w-10 h-10 text-[#D97706]"
+                  class="w-8 h-8 text-[#D97706] transition-colors duration-500 group-hover:text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -746,151 +750,550 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="1"
+                    stroke-width="1.5"
                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                   ></path>
                 </svg>
               </div>
-
-              <h3
-                class="font-oswald text-2xl font-bold uppercase text-[#0F172A] mb-4"
-              >
-                Program Coordination
-              </h3>
-
-              <p
-                class="font-rubik text-[18px] font-normal text-slate-500 leading-[27px]"
-              >
-                Designing and executing community surveys, digital literacy
-                modules, and grass-roots development initiatives with local
-                stakeholders.
-              </p>
             </div>
-          </div>
+
+            <h3
+              class="relative font-oswald text-[26px] font-semibold text-[#0F172A] mb-3 transition-colors duration-500 group-hover:text-white"
+            >
+              Program Coordination
+            </h3>
+            <p
+              class="relative font-rubik text-[17px] font-normal text-slate-600 leading-[27px] transition-colors duration-500 group-hover:text-slate-300"
+            >
+              Designing and executing community surveys, digital literacy
+              modules, and grass-roots development initiatives with local
+              stakeholders.
+            </p>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Experience & Skill Section -->
+    <!-- <section class="py-16 md:py-28 relative overflow-hidden bg-white">
+      <div
+        class="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#D97706]/10 blur-3xl"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-32 -right-24 w-80 h-80 rounded-full bg-[#0F172A]/5 blur-3xl"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-5 relative">
+        <div class="mb-14 md:mb-20 max-w-2xl">
+          <span
+            class="font-rubik text-[18px] text-[#D97706] font-medium block mb-3"
+          >
+            My Experience and Skills
+          </span>
+          <h2
+            class="font-oswald text-4xl sm:text-[52px] font-semibold tracking-[-1px] text-[#0F172A] leading-[1.1]"
+          >
+            Experience <span class="text-[#D97706]">and</span> Skill
+          </h2>
+          <svg
+            class="mt-3 w-44 h-3 text-[#D97706]"
+            viewBox="0 0 176 12"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M2 8 C 30 2, 60 11, 90 6 S 150 3, 174 7"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          <div class="lg:col-span-7">
+            <article
+              class="grid md:grid-cols-[150px_1fr] gap-x-6 pb-8 [&:last-child_.tl-line]:hidden"
+            >
+              <div
+                class="font-oswald text-[22px] font-semibold text-[#0F172A] leading-tight mb-3 md:mb-0 md:pt-[22px] md:text-right"
+              >
+                2026 - Present
+              </div>
+              <div class="relative pl-10">
+                <span
+                  class="tl-line absolute left-[7px] top-6 -bottom-8 w-0.5 bg-slate-200"
+                ></span>
+                <span
+                  class="absolute left-0 top-[22px] w-4 h-4 bg-[#D97706] shadow-[0_0_0_4px_white]"
+                ></span>
+                <span
+                  class="absolute left-0 top-[22px] w-4 h-4 bg-[#D97706] animate-ping opacity-40"
+                ></span>
+
+                <div
+                  class="group bg-slate-50 p-6 shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:translate-x-1 hover:bg-[#0F172A] hover:shadow-[0_25px_45px_-15px_rgba(15,23,42,0.45)]"
+                >
+                  <h3
+                    class="font-oswald text-[26px] font-semibold text-[#0F172A] mb-3 leading-tight transition-colors duration-500 group-hover:text-white"
+                  >
+                    OPMCM Nepal.
+                  </h3>
+                  <span
+                    class="inline-block bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
+                  >
+                    Media Facilitator
+                  </span>
+                  <p
+                    class="font-rubik text-[16px] text-slate-600 leading-[26px] transition-colors duration-500 group-hover:text-slate-300"
+                  >
+                    Media Facilitator at the Office of the Prime Minister and
+                    Council of Ministers.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="grid md:grid-cols-[150px_1fr] gap-x-6 pb-8 [&:last-child_.tl-line]:hidden"
+            >
+              <div
+                class="font-oswald text-[22px] font-semibold text-[#0F172A] leading-tight mb-3 md:mb-0 md:pt-[22px] md:text-right"
+              >
+                2023 - Present
+              </div>
+              <div class="relative pl-10">
+                <span
+                  class="tl-line absolute left-[7px] top-6 -bottom-8 w-0.5 bg-slate-200"
+                ></span>
+                <span
+                  class="absolute left-0 top-[22px] w-4 h-4 bg-[#D97706] shadow-[0_0_0_4px_white]"
+                ></span>
+                <span
+                  class="absolute left-0 top-[22px] w-4 h-4 bg-[#D97706] animate-ping opacity-40"
+                ></span>
+
+                <div
+                  class="group bg-slate-50 p-6 shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:translate-x-1 hover:bg-[#0F172A] hover:shadow-[0_25px_45px_-15px_rgba(15,23,42,0.45)]"
+                >
+                  <h3
+                    class="font-oswald text-[26px] font-semibold text-[#0F172A] mb-3 leading-tight transition-colors duration-500 group-hover:text-white"
+                  >
+                    Kathmandu Metro.
+                  </h3>
+                  <span
+                    class="inline-block bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
+                  >
+                    Associate Expert
+                  </span>
+                  <p
+                    class="font-rubik text-[16px] text-slate-600 leading-[26px] transition-colors duration-500 group-hover:text-slate-300"
+                  >
+                    Serving at Kathmandu Metropolitan City Office managing
+                    expert public communications.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="grid md:grid-cols-[150px_1fr] gap-x-6 pb-8 [&:last-child_.tl-line]:hidden"
+            >
+              <div
+                class="font-oswald text-[22px] font-semibold text-[#0F172A] leading-tight mb-3 md:mb-0 md:pt-[22px] md:text-right"
+              >
+                2021 - 2023
+              </div>
+              <div class="relative pl-10">
+                <span
+                  class="tl-line absolute left-[7px] top-6 -bottom-8 w-0.5 bg-slate-200"
+                ></span>
+                <span
+                  class="absolute left-0 top-[22px] w-4 h-4 bg-[#0F172A] shadow-[0_0_0_4px_white]"
+                ></span>
+
+                <div
+                  class="group bg-slate-50 p-6 shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:translate-x-1 hover:bg-[#0F172A] hover:shadow-[0_25px_45px_-15px_rgba(15,23,42,0.45)]"
+                >
+                  <h3
+                    class="font-oswald text-[26px] font-semibold text-[#0F172A] mb-3 leading-tight transition-colors duration-500 group-hover:text-white"
+                  >
+                    Nepalwatch &amp; Live.
+                  </h3>
+                  <span
+                    class="inline-block bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
+                  >
+                    Reporter
+                  </span>
+                  <p
+                    class="font-rubik text-[16px] text-slate-600 leading-[26px] transition-colors duration-500 group-hover:text-slate-300"
+                  >
+                    Hard news reporting, news writing, and media production
+                    across digital desks.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="grid md:grid-cols-[150px_1fr] gap-x-6 [&:last-child_.tl-line]:hidden"
+            >
+              <div
+                class="font-oswald text-[22px] font-semibold text-[#0F172A] leading-tight mb-3 md:mb-0 md:pt-[22px] md:text-right"
+              >
+                2016 - 2017
+              </div>
+              <div class="relative pl-10">
+                <span
+                  class="tl-line absolute left-[7px] top-6 -bottom-8 w-0.5 bg-slate-200"
+                ></span>
+                <span
+                  class="absolute left-0 top-[22px] w-4 h-4 bg-[#0F172A] shadow-[0_0_0_4px_white]"
+                ></span>
+
+                <div
+                  class="group bg-slate-50 p-6 shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:translate-x-1 hover:bg-[#0F172A] hover:shadow-[0_25px_45px_-15px_rgba(15,23,42,0.45)]"
+                >
+                  <h3
+                    class="font-oswald text-[26px] font-semibold text-[#0F172A] mb-3 leading-tight transition-colors duration-500 group-hover:text-white"
+                  >
+                    Ramilo Shikshya.
+                  </h3>
+                  <span
+                    class="inline-block bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
+                  >
+                    Coordinator
+                  </span>
+                  <p
+                    class="font-rubik text-[16px] text-slate-600 leading-[26px] transition-colors duration-500 group-hover:text-slate-300"
+                  >
+                    Led community digital literacy programs and educational
+                    outreach modules.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            id="skills-panel"
+            class="lg:col-span-5 lg:sticky lg:top-8 relative bg-[#0F172A] p-8 md:p-10 shadow-[0_30px_60px_-20px_rgba(15,23,42,0.6)] overflow-hidden"
+          >
+            <span class="absolute top-0 left-0 h-1 w-24 bg-[#D97706]"></span>
+
+            <div
+              class="pointer-events-none absolute -bottom-20 -right-20 w-56 h-56 rounded-full bg-[#D97706]/15 blur-3xl"
+            ></div>
+
+            <div class="relative space-y-9">
+              <div>
+                <div class="flex items-end justify-between mb-3 gap-4">
+                  <h4
+                    class="font-oswald text-[20px] font-semibold text-white leading-tight"
+                  >
+                    Public Communication
+                  </h4>
+                  <span
+                    class="font-oswald text-[34px] font-bold text-[#D97706] leading-none"
+                  >
+                    <span class="skill-count" data-count="90">90</span
+                    ><span class="text-[18px] ml-0.5">%</span>
+                  </span>
+                </div>
+                <div class="relative h-2.5 bg-white/10">
+                  <div
+                    class="skill-bar absolute inset-y-0 left-0 bg-[#D97706]"
+                    data-value="90"
+                    style="
+                      width: 90%;
+                      transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+                    "
+                  >
+                    <span
+                      class="absolute -right-1 -top-1.5 w-1 h-[22px] bg-white"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-end justify-between mb-3 gap-4">
+                  <h4
+                    class="font-oswald text-[20px] font-semibold text-white leading-tight"
+                  >
+                    News Writing &amp; Reporting
+                  </h4>
+                  <span
+                    class="font-oswald text-[34px] font-bold text-[#D97706] leading-none"
+                  >
+                    <span class="skill-count" data-count="85">85</span
+                    ><span class="text-[18px] ml-0.5">%</span>
+                  </span>
+                </div>
+                <div class="relative h-2.5 bg-white/10">
+                  <div
+                    class="skill-bar absolute inset-y-0 left-0 bg-[#D97706]"
+                    data-value="85"
+                    style="
+                      width: 85%;
+                      transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+                    "
+                  >
+                    <span
+                      class="absolute -right-1 -top-1.5 w-1 h-[22px] bg-white"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-end justify-between mb-3 gap-4">
+                  <h4
+                    class="font-oswald text-[20px] font-semibold text-white leading-tight"
+                  >
+                    Team Coordination
+                  </h4>
+                  <span
+                    class="font-oswald text-[34px] font-bold text-[#D97706] leading-none"
+                  >
+                    <span class="skill-count" data-count="80">80</span
+                    ><span class="text-[18px] ml-0.5">%</span>
+                  </span>
+                </div>
+                <div class="relative h-2.5 bg-white/10">
+                  <div
+                    class="skill-bar absolute inset-y-0 left-0 bg-[#D97706]"
+                    data-value="80"
+                    style="
+                      width: 80%;
+                      transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+                    "
+                  >
+                    <span
+                      class="absolute -right-1 -top-1.5 w-1 h-[22px] bg-white"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-end justify-between mb-3 gap-4">
+                  <h4
+                    class="font-oswald text-[20px] font-semibold text-white leading-tight"
+                  >
+                    Interpersonal Communication
+                  </h4>
+                  <span
+                    class="font-oswald text-[34px] font-bold text-[#D97706] leading-none"
+                  >
+                    <span class="skill-count" data-count="85">85</span
+                    ><span class="text-[18px] ml-0.5">%</span>
+                  </span>
+                </div>
+                <div class="relative h-2.5 bg-white/10">
+                  <div
+                    class="skill-bar absolute inset-y-0 left-0 bg-[#D97706]"
+                    data-value="85"
+                    style="
+                      width: 85%;
+                      transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+                    "
+                  >
+                    <span
+                      class="absolute -right-1 -top-1.5 w-1 h-[22px] bg-white"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          var panel = document.getElementById("skills-panel");
+          if (!panel || !("IntersectionObserver" in window)) return;
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            return;
+
+          var bars = panel.querySelectorAll(".skill-bar");
+          var counts = panel.querySelectorAll(".skill-count");
+
+          // Start empty
+          bars.forEach(function (b) {
+            b.style.width = "0%";
+          });
+          counts.forEach(function (c) {
+            c.textContent = "0";
+          });
+
+          var observer = new IntersectionObserver(
+            function (entries) {
+              if (!entries[0].isIntersecting) return;
+              observer.disconnect();
+
+              bars.forEach(function (b) {
+                b.style.width = b.getAttribute("data-value") + "%";
+              });
+
+              counts.forEach(function (c) {
+                var target = parseInt(c.getAttribute("data-count"), 10);
+                var start = null;
+                function step(ts) {
+                  if (!start) start = ts;
+                  var p = Math.min((ts - start) / 1400, 1);
+                  var eased = 1 - Math.pow(1 - p, 3);
+                  c.textContent = Math.round(target * eased);
+                  if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+              });
+            },
+            { threshold: 0.35 },
+          );
+
+          observer.observe(panel);
+        })();
+      </script>
+    </section> -->
+
     <!-- Working Process / Latest Projects Section -->
     <section class="py-16 md:py-24 relative overflow-hidden bg-white">
-      <div class="max-w-7xl mx-auto px-5">
+      <!-- Soft background shapes -->
+      <div
+        class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#D97706]/10 blur-3xl"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-32 -left-24 w-80 h-80 rounded-full bg-[#0F172A]/5 blur-3xl"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-5 relative">
         <!-- Section Header Row -->
-        <div class="grid md:grid-cols-12 gap-8 items-end mb-16">
-          <div class="md:col-span-6">
+        <div
+          class="flex flex-col sm:flex-row sm:items-end justify-between gap-8 mb-12 md:mb-16"
+        >
+          <div class="max-w-2xl">
             <span
-              class="font-rubik text-[16px] uppercase text-[#D97706] font-medium block mb-2"
+              class="font-rubik text-[18px] text-[#D97706] font-medium block mb-3"
             >
               Working Process
             </span>
             <h2
-              class="font-oswald text-3xl sm:text-[44px] font-semibold uppercase tracking-[-2px] text-[#0F172A] leading-[1.1]"
+              class="font-oswald text-4xl sm:text-[52px] font-semibold tracking-[-1px] text-[#0F172A] leading-[1.1]"
             >
               Latest <span class="text-[#D97706]">Working</span> Project
             </h2>
+            <!-- Hand-drawn style underline -->
+            <svg
+              class="mt-3 w-44 h-3 text-[#D97706]"
+              viewBox="0 0 176 12"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 8 C 30 2, 60 11, 90 6 S 150 3, 174 7"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
           </div>
-          <div
-            class="md:col-span-6 flex items-center justify-between md:justify-end gap-6"
-          >
-            <div class="flex items-start gap-4">
-              <div class="w-1.5 h-12 bg-[#D97706] shrink-0 mt-1"></div>
-              <p
-                class="font-rubik text-[18px] font-normal text-slate-700 leading-relaxed"
+
+          <!-- Navigation Arrows -->
+          <div class="flex items-center gap-3 shrink-0">
+            <button
+              id="prev-project-btn"
+              aria-label="Previous Projects"
+              class="w-12 h-12 bg-slate-100 text-[#0F172A] flex items-center justify-center transition-all duration-300 hover:bg-[#D97706] hover:text-white disabled:opacity-40 disabled:hover:bg-slate-100 disabled:hover:text-[#0F172A] disabled:cursor-not-allowed"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                Explore key collaborative initiatives, municipal surveys, and
-                digital and civic sectors.
-              </p>
-            </div>
-            <!-- Navigation Arrows -->
-            <div class="flex items-center gap-3 shrink-0">
-              <button
-                id="prev-project-btn"
-                aria-label="Previous Projects"
-                class="w-12 h-12 text-[#D97708] border border-[#D97708] hover:border-[#D97708] hover:bg-[#D97708] hover:text-white text-[#0F172A] flex items-center justify-center transition-colors"
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              id="next-project-btn"
+              aria-label="Next Projects"
+              class="w-12 h-12 bg-[#0F172A] text-white flex items-center justify-center transition-all duration-300 hover:bg-[#D97706] disabled:opacity-40 disabled:hover:bg-[#0F172A] disabled:cursor-not-allowed"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 19l-7-7 7-7"
-                  ></path>
-                </svg>
-              </button>
-              <button
-                id="next-project-btn"
-                aria-label="Next Projects"
-                class="w-12 h-12 text-[#D97708] border border-[#D97708] hover:border-[#D97708] hover:bg-[#D97708] hover:text-white text-[#0F172A] flex items-center justify-center transition-colors"
-              >
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  ></path>
-                </svg>
-              </button>
-            </div>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
           </div>
         </div>
 
-        <!-- Scrollable 3 Project Cards Container -->
+        <!-- Scrollable Project Cards Container -->
         <div
           id="project-carousel-grid"
-          class="grid grid-flow-col auto-cols-[100%] sm:auto-cols-[calc(50%-16px)] md:auto-cols-[calc(33.333%-21.333px)] gap-8 overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          class="grid grid-flow-col auto-cols-[100%] sm:auto-cols-[calc(50%-16px)] md:auto-cols-[calc(33.333%-21.333px)] gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pt-3 pb-10 -mb-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           <!-- Project Card 1 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <!-- Image -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="
+                  this.classList.add('hidden');
+                  this.nextElementSibling.classList.remove('hidden');
+                "
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <!-- Content -->
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -904,49 +1307,52 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <!-- Growing bottom line -->
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
+
           <!-- Project Card 2 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="
+                  this.classList.add('hidden');
+                  this.nextElementSibling.classList.remove('hidden');
+                "
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -960,49 +1366,51 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
+
           <!-- Project Card 3 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="
+                  this.classList.add('hidden');
+                  this.nextElementSibling.classList.remove('hidden');
+                "
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1016,49 +1424,51 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
+
           <!-- Project Card 4 -->
-          <div
-            class="bg-[#0F172A] text-white p-6 flex flex-col justify-between"
+          <article
+            class="group snap-start relative bg-slate-50 flex flex-col shadow-[0_10px_30px_-12px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_50px_-15px_rgba(15,23,42,0.3)]"
           >
-            <div>
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-200">
+              <img
+                src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+                alt="Tamankhola Village Profile Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="
+                  this.classList.add('hidden');
+                  this.nextElementSibling.classList.remove('hidden');
+                "
+              />
               <div
-                class="relative overflow-hidden mb-6 bg-slate-900 border border-white/10 aspect-[4/3] flex items-center justify-center"
+                class="hidden absolute inset-0 flex items-center justify-center bg-[#0F172A] text-[#D97706] font-oswald text-5xl font-bold"
               >
-                <img
-                  src="/assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
-                  alt="Tamankhola Village Profile Project"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.classList.add('hidden');
-                    document
-                      .getElementById('proj1Fallback')
-                      .classList.remove('hidden');
-                  "
-                />
+                TV
               </div>
+            </div>
 
+            <div class="flex flex-col flex-1 p-6 md:p-7">
               <span
-                class="font-rubik text-[16px] uppercase text-white/90 block mb-2 font-normal"
+                class="inline-block self-start bg-[#D97706] text-white font-rubik text-[13px] font-medium px-3 py-1 mb-4"
               >
                 Mar 2018 - Oct 2018
               </span>
-
               <h3
-                class="font-rubik text-[20px] font-semibold uppercase text-white mb-3 hover:text-[#D97708] transition-colors"
+                class="font-oswald text-[24px] font-semibold text-[#0F172A] leading-tight mb-6 transition-colors duration-300 group-hover:text-[#D97706]"
               >
                 Tamankhola Village Profile
               </h3>
-            </div>
-
-            <div>
               <a
                 href="gallery.html"
-                class="inline-flex items-center gap-2 font-rubik text-[12px] font-semibold uppercase text-[#D97706] hover:text-white transition-colors"
+                class="mt-auto inline-flex items-center gap-2 font-rubik text-[14px] font-semibold text-[#0F172A] transition-colors duration-300 group-hover:text-[#D97706] after:absolute after:inset-0"
               >
-                <span>READ MORE</span>
+                <span>Read More</span>
                 <svg
-                  class="w-4 h-4"
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1072,10 +1482,91 @@
                 </svg>
               </a>
             </div>
-          </div>
+
+            <span
+              class="absolute bottom-0 left-0 h-1 w-12 bg-[#D97706] transition-all duration-500 group-hover:w-full"
+            ></span>
+          </article>
+        </div>
+      </div>
+
+      <!-- Carousel arrows -->
+    </section>
+
+    <!-- Expanding Gallery Section -->
+    <section class=" overflow-hidden">
+      <div class="expanding-gallery flex flex-row w-full h-[450px]">
+        <div class="gallery-img active relative overflow-hidden">
+          <img src="./assets/hero-banner-1.jpeg" alt="Gallery 1" />
+        </div>
+
+        <div class="gallery-img relative overflow-hidden">
+          <img
+            src="./assets/WhatsApp Image 2026-10-28 at 1.27.20 PM (1).jpeg"
+            alt="Gallery 3"
+          />
+        </div>
+        <div class="gallery-img relative overflow-hidden">
+          <img
+            src="./assets/WhatsApp Image 2026-10-28 at 1.27.19 PM (1).jpeg"
+            alt="Gallery 4"
+          />
+        </div>
+        <div class="gallery-img relative overflow-hidden">
+          <img
+            src="./assets/WhatsApp Image 2026-10-28 at 1.27.20 PM (1).jpeg"
+            alt="Gallery 2"
+          />
+        </div>
+
+        <div class="gallery-img hidden md:block relative overflow-hidden">
+          <img
+            src="./assets/WhatsApp Image 2026-10-28 at 1.27.19 PM.jpeg"
+            alt="Gallery 5"
+          />
+        </div>
+
+        <div class="gallery-img hidden md:block relative overflow-hidden">
+          <img
+            src="./assets/WhatsApp Image 2026-10-28 at 1.27.20 PM (1).jpeg"
+            alt="Gallery 6"
+          />
+        </div>
+
+        <div class="gallery-img relative overflow-hidden">
+          <img
+            src="./assets/WhatsApp Image 2026-10-28 at 1.27.19 PM (1).jpeg"
+            alt="Gallery 4"
+          />
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const galleryItems = document.querySelectorAll(
+          ".expanding-gallery .gallery-img",
+        );
+
+        // Set first image as active by default (optional)
+        if (galleryItems.length > 0) {
+          galleryItems[0].classList.add("active");
+        }
+
+        galleryItems.forEach((item) => {
+          // Hover event for Desktop
+          item.addEventListener("mouseenter", () => {
+            galleryItems.forEach((img) => img.classList.remove("active"));
+            item.classList.add("active");
+          });
+
+          // Click event for Mobile / Touch devices
+          item.addEventListener("click", () => {
+            galleryItems.forEach((img) => img.classList.remove("active"));
+            item.classList.add("active");
+          });
+        });
+      });
+    </script>
 
     <!-- CTA & Footer Combined Section -->
     <section

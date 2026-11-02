@@ -114,22 +114,10 @@
       <div class="max-w-7xl mx-auto px-5 text-center">
         <!-- Page Title -->
         <h1
-          class="font-oswald text-3xl sm:text-5xl font-bold uppercase tracking-wider text-white mb-3"
+          class="font-oswald text-3xl sm:text-6xl font-bold uppercase tracking-wide text-white mb-3"
         >
           Contact Me
         </h1>
-
-        <!-- Breadcrumb Navigation Links -->
-        <nav
-          aria-label="Breadcrumb"
-          class="inline-flex items-center gap-2 font-rubik text-xs sm:text-sm uppercase tracking-widest text-white/90"
-        >
-          <a href="index.html" class="hover:text-[#0F172A] transition-colors"
-            >Home</a
-          >
-          <span class="text-white/60">/</span>
-          <span class="text-[#0F172A] font-semibold">Contact Me</span>
-        </nav>
       </div>
     </section>
 
@@ -415,27 +403,33 @@
               </div>
 
               <!-- Submit Button -->
-              <button
-                type="submit"
-                class="inline-flex items-center gap-3 bg-[#023464] hover:bg-slate-800 text-white font-oswald text-lg tracking-wider uppercase px-8 py-3.5 shadow-lg transition-all duration-300 transform hover:translate-x-0.5"
-              >
-                <span>Send Message</span>
-                <span class="bg-white/20 p-1">
-                  <svg
-                    class="w-4 h-4 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+
+              <div class="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="/contact.html"
+                  target="_blank"
+                  class="group/btn inline-flex items-stretch bg-[#0F172A] text-white font-oswald text-lg tracking-wider uppercase shadow-[0_20px_40px_-15px_rgba(15,23,42,0.6)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_45px_-15px_rgba(217,119,6,0.6)]"
+                >
+                  <span class="px-8 py-3.5">Send Message</span>
+                  <span
+                    class="flex items-center justify-center w-14 bg-[#D97706] transition-all duration-300 group-hover/btn:w-16"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5l7 7-7 7"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
+                    <svg
+                      class="w-5 h-5 text-white transition-transform duration-300 group-hover/btn:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </form>
           </div>
         </div>
