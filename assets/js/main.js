@@ -264,3 +264,18 @@
     });
   }
 })();
+
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector("#site-nav");
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener("click", () => {
+    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+
+    // Toggle ARIA state
+    navToggle.setAttribute("aria-expanded", !isExpanded);
+
+    // Toggle CSS display class
+    siteNav.classList.toggle("is-open");
+  });
+}

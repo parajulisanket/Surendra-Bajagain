@@ -411,6 +411,36 @@ main {
   transform: translate(-50%, 0) rotate(-45deg);
 }
 
+@media (max-width: 880px) {
+  /* Hide the nav by default on mobile */
+  .site-header .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000; /* Matches your dark mobile menu theme */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 999;
+  }
+
+  /* When JS adds .nav-open to body/html, show the navigation */
+  .nav-open .site-header .nav {
+    display: flex !important;
+  }
+
+  /* Style the links inside the mobile overlay so they are visible */
+  .site-header .nav .nav__link {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+}
+
 /* 5. Buttons & links ------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -653,6 +683,19 @@ main {
   justify-content: space-between;
   gap: 18px 40px;
 }
+
+.wordmarks img {
+  display: block;
+  width: auto;
+  height: 50px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.wordmarks img:hover {
+  filter: grayscale(0%);
+}
+
 .wordmarks li {
   display: inline-flex;
   align-items: center;
@@ -1889,7 +1932,8 @@ a.contact-card:hover {
 @media (max-width: 880px) {
   .nav-toggle {
     display: block;
-    z-index: 2;
+    z-index: 1001;
+    color: white;
   }
   .nav {
     position: fixed;
