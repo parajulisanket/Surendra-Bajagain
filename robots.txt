@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://surendrabajagain.com/sitemap.xml
