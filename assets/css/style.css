@@ -327,7 +327,8 @@ main {
   letter-spacing: 0.04em;
 }
 .brand__sub {
-  font-size: 0.8rem;
+  font-size: 1.07rem;
+  font-weight: 500;
   color: var(--muted);
 }
 
@@ -569,7 +570,10 @@ main {
   font-size: 1.02rem;
 }
 .hero__deva {
-  font-size: 1.05rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  word-spacing: 5px;
+  letter-spacing: 1px;
   color: var(--muted);
   margin: -12px 0 22px;
 }
