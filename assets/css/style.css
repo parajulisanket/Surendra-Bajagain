@@ -11,18 +11,18 @@
 
 /* 1. Tokens ---------------------------------------------------------------- */
 :root {
-  --bg: #000;
-  --band: #0b0b0c; /* alternate full-width band */
-  --card: #121214; /* raised panels */
-  --card-2: #18181b;
-  --line: rgba(255, 255, 255, 0.1);
-  --line-2: rgba(255, 255, 255, 0.18);
-  --text: #fff;
-  --text-2: #d4d4d8; /* body copy  (15.4:1 on #000) */
-  --muted: #a1a1aa; /* secondary  ( 8.3:1 on #000) */
-  --dim: #71717a; /* tertiary, large text only */
-  --accent: #3b82f6; /* blazer blue, used sparingly */
-  --accent-soft: rgba(59, 130, 246, 0.16);
+  --bg: #071936; /* rich royal navy-blue (clearly blue, not black) */
+  --band: #0b244d; /* alternate full-width band */
+  --card: #103166; /* raised panels */
+  --card-2: #163f80; /* elevated hover cards & inputs */
+  --line: rgba(142, 192, 251, 0.18);
+  --line-2: rgba(142, 192, 251, 0.34); /* makes outlined "BAJAGAIN" crisp */
+  --text: #ffffff;
+  --text-2: #e2eeff; /* crisp ice-white body copy */
+  --muted: #9cc6ff; /* bright sky-blue for Devanagari & subtext */
+  --dim: #6ca3eb; /* tertiary metadata */
+  --accent: #388bff; /* vibrant cobalt highlight (pops on #071936) */
+  --accent-soft: rgba(56, 139, 255, 0.22);
   --danger: #f87171;
 
   --font-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
