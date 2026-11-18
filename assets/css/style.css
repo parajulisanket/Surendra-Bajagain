@@ -280,7 +280,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(0, 0, 0, 0.72);
+  background: #061936;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transition: border-color 0.3s;
@@ -1799,8 +1799,8 @@ a.contact-card:hover {
   min-height: 52px;
   padding: 14px 16px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--line-2);
-  background: #0a0a0b;
+  border: 1px solid rgba(142, 192, 251, 0.35);
+  background: #051530;
   color: #fff;
   font: 300 1rem/1.4 var(--font-body);
   transition:
